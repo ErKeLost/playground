@@ -25,6 +25,9 @@ const elementplusImports = {
 const jzzxUtilsImports = {
   'jzzx-utils': 'https://unpkg.com/jzzx-utils@1.0.1/dist/utils.es.min.js'
 }
+const jzzxLayoutImports = {
+  'jzzx-layout': 'https://unpkg.com/@erkelost/layout@2.0.5/dist/index.es.js'
+}
 const welcomeCode = `\
 <script setup lang='ts'>
 import { ref } from 'vue'
@@ -85,6 +88,7 @@ const varletReplPluginCode = `\
 import VarletUI, { Context } from '@varlet/ui'
 import ElementPlusUI from 'element-plus'
 import {formatDuration} from 'jzzx-utils'
+import adnyLayout from 'jzzx-layout'
 import DevUI from 'vue-devui'
 // import Antd from 'ant-design-vue
 import '@varlet/touch-emulator'
@@ -95,11 +99,13 @@ await appendStyle()
 export {
   formatDuration
 }
+console.log(adnyLayout)
 export function installVarletUI() {
   const instance = getCurrentInstance()
   instance.appContext.app.use(VarletUI)
   instance.appContext.app.use(DevUI)
   instance.appContext.app.use(ElementPlusUI)
+  instance.appContext.app.use(adnyLayout)
   // instance.appContext.app.use(Antd)
 }
 
@@ -280,7 +286,8 @@ export class ReplStore implements Store {
               ...devuiImports,
               // ...antdesignImports,
               ...jzzxUtilsImports,
-              ...elementplusImports
+              ...elementplusImports,
+              ...jzzxLayoutImports
             }
           },
           null,
