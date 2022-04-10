@@ -26,7 +26,7 @@ const jzzxUtilsImports = {
   'jzzx-utils': 'https://unpkg.com/jzzx-utils@1.0.1/dist/utils.es.min.js'
 }
 const jzzxLayoutImports = {
-  'jzzx-layout': 'https://unpkg.com/@erkelost/layout@2.0.5/dist/index.es.js'
+  'jzzx-layout': 'https://unpkg.com/@erkelost/layout@2.1.6/dist/index.es.js'
 }
 const welcomeCode = `\
 <script setup lang='ts'>
