@@ -14,7 +14,7 @@ const varletImports = {
 }
 const varletCss = 'https://unpkg.com/@varlet/ui@1.26.2/es/style.css'
 const devuiImports = {
-  'vue-devui': 'https://unpkg.com/vue-devui@1.0.0-beta.17/vue-devui.es.js'
+  'vue-devui': 'https://unpkg.com/vue-devui@1.0.0-rc.7/vue-devui.es.js'
 }
 const antdesignImports = {
   'ant-design-vue': 'https://unpkg.com/ant-design-vue@3.0.0-beta.2/es/index.js'
@@ -27,6 +27,15 @@ const jzzxUtilsImports = {
 }
 const jzzxLayoutImports = {
   'jzzx-layout': 'https://unpkg.com/@erkelost/layout@2.1.6/dist/index.es.js'
+}
+const vueuseImports = {
+  '@vueuse/core': 'https://unpkg.com/@vueuse/core@8.3.1/index.mjs',
+  '@vueuse/shared': 'https://unpkg.com/@vueuse/shared@8.3.1/index.mjs',
+  'vue-demi': 'https://unpkg.com/vue-demi/lib/index.mjs'
+}
+const floatingUiImports = {
+  '@floating-ui/dom': 'https://unpkg.com/@floating-ui/dom/dist/floating-ui.dom.esm.min.js',
+  '@floating-ui/core': 'https://unpkg.com/@floating-ui/core/dist/floating-ui.core.esm.min.js'
 }
 const welcomeCode = `\
 <script setup lang='ts'>
@@ -125,7 +134,7 @@ export function appendStyle() {
     document.body.appendChild(w)
     const d = document.createElement('link')
     d.rel = 'stylesheet'
-    d.href = 'https://unpkg.com/vue-devui@1.0.0-beta.14/style.css'
+    d.href = 'https://unpkg.com/vue-devui@1.0.0-rc.7/style.css'
     d.onload = resolve
     d.onerror = reject
     document.body.appendChild(d)
@@ -287,7 +296,9 @@ export class ReplStore implements Store {
               // ...antdesignImports,
               ...jzzxUtilsImports,
               ...elementplusImports,
-              ...jzzxLayoutImports
+              ...jzzxLayoutImports,
+              ...vueuseImports,
+              ...floatingUiImports
             }
           },
           null,
