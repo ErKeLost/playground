@@ -34,8 +34,8 @@ const vueuseImports = {
   'vue-demi': 'https://unpkg.com/vue-demi/lib/index.mjs'
 }
 const floatingUiImports = {
-  '@floating-ui/dom': 'https://unpkg.com/@floating-ui/dom/dist/floating-ui.dom.esm.min.js',
-  '@floating-ui/core': 'https://unpkg.com/@floating-ui/core/dist/floating-ui.core.esm.min.js'
+  '@floating-ui/dom': 'https://unpkg.com/@floating-ui/dom/dist/floating-ui.dom.esm.js',
+  '@floating-ui/core': 'https://unpkg.com/@floating-ui/core/dist/floating-ui.core.esm.js'
 }
 const welcomeCode = `\
 <script setup lang='ts'>
