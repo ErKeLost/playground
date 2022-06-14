@@ -1,5 +1,5 @@
 {
-  "name": "@vue/sfc-playground",
+  "name": "@erkelost/sfc-playground",
   "version": "3.2.31",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "vite": "^2.7.1"
   },
   "dependencies": {
-    "@vue/repl": "^1.0.0",
+    "@vue/repl": "1.0.0",
     "file-saver": "^2.0.5",
     "jszip": "^3.6.0",
     "naive-ui": "^2.26.0",
